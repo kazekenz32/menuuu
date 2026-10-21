@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MenuKita Cafe | Menu Digital</title>
+  <meta name="description" content="Lihat menu MenuKita Cafe dan pesan makanan favoritmu.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <a href="#" class="brand">☕ MenuKita</a>
+      <a href="#keranjang" class="nav-link">Keranjang 🛒</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO OUR CAFE</p>
+      <h1>Temukan Rasa<br>Favoritmu.</h1>
+      <p class="hero-description">
+        Kopi, makanan, dan cerita terbaik dimulai dari sini.
+      </p>
+      <a href="#daftar-menu" class="hero-button">Lihat Menu ↓</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" id="daftar-menu">
+      <p class="eyebrow">OUR MENU</p>
+      <h2>Menu Pilihan</h2>
+      <p>Pilih menu favoritmu, lalu masukkan ke keranjang.</p>
+    </section>
+
+    <section class="menu-controls">
+      <input
+        type="search"
+        id="search"
+        placeholder="Cari kopi, makanan, atau camilan..."
+        aria-label="Cari menu"
+      >
+      <div id="categories" class="categories"></div>
+    </section>
+
+    <section id="menu-list" class="menu-grid" aria-live="polite">
+      <p>Memuat menu...</p>
+    </section>
+
+    <section class="cart-section" id="keranjang">
+      <div class="cart-heading">
+        <div>
+          <p class="eyebrow">YOUR ORDER</p>
+          <h2>Keranjang Pesanan</h2>
+        </div>
+        <span id="cart-count" class="cart-count">0 item</span>
+      </div>
+
+      <div class="table-field">
+        <label for="table-number">Nomor meja</label>
+        <input
+          type="text"
+          id="table-number"
+          placeholder="Contoh: 05"
+          maxlength="10"
+        >
+      </div>
+
+      <div id="cart-list" class="cart-list">
+        Keranjang masih kosong.
+      </div>
+
+      <div class="cart-summary">
+        <span>Total pesanan</span>
+        <strong id="total">Rp0</strong>
+      </div>
+
+      <button type="button" id="order-button" class="order-button">
+        Pesan melalui WhatsApp ↗
+      </button>
+
+      <p id="message" class="message" aria-live="polite"></p>
+
+      <p class="cart-note">
+        Pesanan akan dibuka melalui WhatsApp untuk dikonfirmasi.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="brand footer-brand">☕ MenuKita</a>
+    <p>Tempat sederhana untuk rasa yang istimewa.</p>
+    <p>© <span id="year"></span> MenuKita Cafe</p>
+  </footer>
+</body>
+</html>
